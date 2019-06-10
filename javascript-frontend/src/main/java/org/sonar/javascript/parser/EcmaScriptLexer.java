@@ -444,7 +444,7 @@ public enum EcmaScriptLexer implements GrammarRuleKey {
 
     // JSX looks at first letter: capital - JS identifier, small - html tag
     // "this" is the exception of this rule
-    b.rule(JSX_HTML_TAG).is(SPACING, b.regexp("^(?!this)[a-z][\\w]*"));
+    b.rule(JSX_HTML_TAG).is(SPACING, b.regexp("^(?!this)[a-z][\\w-:]*"));
 
     // Keywords
     b.rule(ASYNC).is(word(b, "async"));
